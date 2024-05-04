@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <form action="loginPage.html" onsubmit="return validateForm()">
+    <div class="information-cont">
+        <h1>Registration Form</h1>
+        <div class="cont">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="cont">
+            <label for="email"><b>Email:</b></label>
+            <input type="email"  id="email" placeholder="Enter Your Email-Id" required>
+        </div>
+        <div class="cont">
+            <label for="password"><b>PassWord:</b></label>
+            <input type="password" id="password" placeholder="Enter Your Password" required>
+        </div>
+        <div class="cont">
+            <label for="repeat-password"><b>Confirm Password:</b></label>
+            <input type="password"  id="repeat-password" placeholder="ReEnter your Password" required>
+        </div>
+        <div class="cont">
+            <label for="phone-number"><b>Phone Number:</b></label>
+            <input type="tel"  id="phone-number" placeholder="Phone number" required>
+        </div>
+        <div class="gender">
+            <label id="gen"><b>Gender:</b></label>
+            <div class="radio-group">
+                <label for="male"><b>Male</b></label>
+                <input type="radio" name="gender" value="male" id="male">
+                
+                <label for="female"><b>Female</b></label>
+                <input type="radio" name="gender" value="female" id="female">
+                
+                <label for="other"><b>Other</b></label>
+                <input type="radio" name="gender" value="other" id="other">
+            </div>
+        </div>        
+        <div class="dob">
+            <label for="dob"><b>Date Of Birth:</b></label>
+            <input type="date" required>
+            <!-- <label for="date"><b>Date:</b></label>
+            <input type="number" value="date" id="date" min="1" max="31">
+            <label for="month"><b>Month:</b></label>
+            <input type="number" value="month" id="month" min="1" max="12">
+            <label for="year"><b>Year:</b></label>
+            <input type="number" value="year" id="year" min="1991" max="2024"> -->
+        </div>
+        <div class="Address">
+            <label for="address"><b>Address:</b></label>
+            <textarea id="address" required></textarea>
+        </div>
+        <div class="btns">
+        <div class="submit-btn">
+            <button  type="submit" class="register">Register</button>
+        </div>
+        <div class="submit-btn already" id="already">
+            <button  type="submit">Already Have an Account?</button>
+        </div>
+        </div>
+    </div>
+    </form>
+</body>
+<script src="registration.js"></script>
+<script src="loginPage.js"></script>
+</html>

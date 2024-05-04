@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(128, 128, 128, 0.359);
+}
+.information-cont{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+}
+.cont label{
+    position: absolute;
+    left:80px;
+}
+.submit-btn button{
+    width:80px;
+    padding:5px;
+    border-radius: 5px;
+    background-color: rgba(153, 205, 50, 0.579);
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+.submit-btn button:hover{
+    background-color: yellowgreen;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.551);
+}
+.Address{
+    display:flex;
+}
+.Address #address{
+    width:250px;
+    height:80px;
+    padding-top: 0px;
+    text-align: start;
+}
+.dob label,.Address label,.gender #gen{
+    position: absolute;
+    left:80px;
+}
+.btns{
+    display: flex;
+    gap:20px;
+}
+.cont input{
+    width:200px;
+    height:25px;
+}

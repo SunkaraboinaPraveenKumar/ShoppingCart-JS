@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPI Payment</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <h1>UPI Payment</h1>
+    
+    <!-- Display the total amount to be paid -->
+    <p>Total Amount: $<span id="totalAmount"></span></p>
+    
+    <!-- UPI payment options -->
+    <h2>Select UPI Provider</h2>
+    <form id="upiForm">
+        <input type="radio" id="paytm" name="upiProvider" value="Paytm">
+        <label for="paytm">Paytm</label><br>
+        
+        <input type="radio" id="phonepe" name="upiProvider" value="PhonePe">
+        <label for="phonepe">PhonePe</label><br>
+        
+        <input type="radio" id="googlepay" name="upiProvider" value="Google Pay">
+        <label for="googlepay">Google Pay</label><br>
+        
+        <input type="radio" id="bhim" name="upiProvider" value="BHIM">
+        <label for="bhim">BHIM</label><br>
+        
+        <input type="radio" id="other" name="upiProvider" value="Other">
+        <label for="other">Other</label><br>
+        
+        <!-- Button to confirm order -->
+        <button type="button" onclick="confirmOrder()">Confirm Order</button>
+    </form>
+    
+    <script>
+    function confirmOrder() {
+        const upiForm = document.getElementById('upiForm');
+        const selectedUPIProvider = upiForm.elements['upiProvider'].value;
+        
+        // Check if a UPI provider is selected
+        if (!selectedUPIProvider) {
+            alert("Please select a UPI provider.");
+            return; // Do not proceed with confirmation
+        }
+
+        // Placeholder logic for confirming order
+        alert("Order confirmed with " + selectedUPIProvider + "!");
+
+        // Redirect back to the shopping cart or a thank-you page
+        window.location.href = 'shopping.html';
+    }
+
+    // Get the total amount from the URL and display it
+    const urlParams = new URLSearchParams(window.location.search);
+    const totalAmount = urlParams.get('amount');
+    document.getElementById('totalAmount').textContent = totalAmount;
+    </script>
+</body>
+</html>

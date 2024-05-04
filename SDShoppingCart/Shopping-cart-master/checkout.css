@@ -1,0 +1,96 @@
+/* Basic reset to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Header styling */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: blue;
+  }
+  
+  /* Form styling */
+  form {
+    max-width: 500px;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.288);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form elements styling */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  input:hover, textarea:hover {
+    border: 1px solid yellow;
+  }
+  
+  textarea {
+    height: 80px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darken button on hover */
+  }
+  
+  /* Add spacing between form elements */
+  form > * {
+    margin-bottom: 15px;
+  }
+  
+  /* Back to Cart button styling */
+  .back-to-cart {
+    text-align: center; /* Center align the anchor */
+    margin-top: 2rem; /* Add top margin for spacing */
+  }
+  
+  .back-to-cart button {
+    padding: 10px 20px;
+    background-color: #ff6347; /* Tomato red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-to-cart button:hover {
+    background-color: #e55347; /* Slightly darker red on hover */
+  }
+  

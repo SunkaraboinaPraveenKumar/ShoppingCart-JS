@@ -1,0 +1,66 @@
+/* Basic reset to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Header styling */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: blue;
+  }
+  
+  /* Payment options container */
+  .payment-options {
+    max-width: 600px; /* Set maximum width */
+    margin: 0 auto; /* Center the payment options */
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.1); /* Light background color */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Individual payment method styling */
+  .payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+  }
+  
+  .payment-method input {
+    margin-right: 10px;
+  }
+  
+  .payment-icon {
+    width: 30px; /* Set size for payment icons */
+    height: 30px;
+    margin-right: 10px; /* Spacing between icon and label text */
+  }
+  
+  /* Button styling */
+  button {
+    display: block; /* Ensure the button is displayed as a block */
+    margin: 0 auto; /* Center the button */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darken on hover */
+  }
+  

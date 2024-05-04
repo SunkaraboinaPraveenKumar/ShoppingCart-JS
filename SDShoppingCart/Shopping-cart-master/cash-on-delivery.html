@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cash on Delivery</title>
+    <link rel="stylesheet" href="checkout.css"> <!-- Link to your CSS -->
+    <style>
+        button{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cash on Delivery</h1>
+    
+    <!-- Message indicating cash on delivery -->
+    <p>Your order for $<span id="totalAmount"></span> will be paid for with cash on delivery.</p>
+    
+    <!-- Confirmation button to proceed with cash on delivery -->
+    <button type="button" onclick="confirmOrder()">Confirm Order</button>
+    
+    <script>
+    function confirmOrder() {
+        // Placeholder logic for confirming order
+        alert("Order confirmed!");
+
+        // Redirect back to the shopping cart or a thank you page
+        window.location.href = 'shopping.html';
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const totalAmount = urlParams.get('amount');
+    document.getElementById('totalAmount').textContent = totalAmount;
+    </script>
+</body>
+</html>

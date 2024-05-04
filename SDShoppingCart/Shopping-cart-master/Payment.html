@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="payment.css"> <!-- Include your CSS -->
+</head>
+<body>
+    <h1>Choose Your Payment Method</h1>
+    
+    <!-- Payment options section -->
+    <div class="payment-options">
+        <div class="payment-method">
+            <input type="radio" id="credit-card" name="payment" value="credit-card">
+            <label for="credit-card">
+                Credit Card
+            </label>
+        </div>
+        
+        <div class="payment-method">
+            <input type="radio" id="debit-card" name="payment" value="debit-card">
+            <label for="debit-card">
+                Debit Card
+            </label>
+        </div>
+        
+        <div class="payment-method">
+            <input type="radio" id="upi" name="payment" value="upi">
+            <label for="upi">
+                UPI
+            </label>
+        </div>
+        
+        <div class="payment-method">
+            <input type="radio" id="cash-on-delivery" name="payment" value="cash-on-delivery">
+            <label for="cash-on-delivery">
+                Cash on Delivery
+            </label>
+        </div>
+        
+        <button type="button" onclick="submitPayment()">Proceed to Payment</button> <!-- Button with type="button" -->
+    </div>
+    <script src="Data.js"></script>
+    <script src="cart.js"></script> <!-- Include the script with getTotalCartAmount -->
+    <script src="payment.js"></script> <!-- Include the script with submitPayment -->
+</body>
+</html>

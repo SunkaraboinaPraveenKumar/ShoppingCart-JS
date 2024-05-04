@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debit Card Payment</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <h1>Debit Card Payment</h1>
+    
+    <!-- Display the total amount to be paid -->
+    <p>Total Amount: $<span id="totalAmount"></span></p>
+    
+    <!-- Form to collect debit card information -->
+    <form id="paymentForm">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="expiryDate">Expiry Date (MM/YY):</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+        
+        <button type="button" onclick="confirmOrder()">Confirm Order</button>
+    </form>
+    
+    <script>
+    function confirmOrder() {
+        const cardNumber = document.getElementById('cardNumber').value;
+        const expiryDate = document.getElementById('expiryDate').value;
+        const cvv = document.getElementById('cvv').value;
+
+        // Basic validation to ensure all fields are filled
+        if (!cardNumber || !expiryDate || !cvv) {
+            alert("Please fill in all required fields.");
+            return; // Do not proceed
+        }
+
+        // Validate card number (basic check for 16 digits)
+        const cardNumberPattern = /^\d{16}$/;
+        if (!cardNumberPattern.test(cardNumber)) {
+            alert("Please enter a valid 16-digit card number.");
+            return; // Do not proceed
+        }
+
+        // Validate expiry date (MM/YY format)
+        const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        if (!expiryDatePattern.test(expiryDate)) {
+            alert("Please enter a valid expiry date in MM/YY format.");
+            return; // Do not proceed
+        }
+
+        // Validate CVV (basic check for 3 digits)
+        const cvvPattern = /^\d{3}$/;
+        if (!cvvPattern.test(cvv)) {
+            alert("Please enter a valid 3-digit CVV.");
+            return; // Do not proceed
+        }
+
+        // If all validations pass, confirm order
+        alert("Order confirmed!");
+
+        // Redirect to the shopping page
+        window.location.href = 'shopping.html';
+    }
+
+    // Display the total amount from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const totalAmount = urlParams.get('amount');
+    document.getElementById('totalAmount').textContent = totalAmount;
+    </script>
+</body>
+</html>
