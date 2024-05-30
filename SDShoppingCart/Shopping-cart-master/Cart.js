@@ -117,7 +117,7 @@ let totalAmount = ()=>{
         <a href="checkout.html">
           <button class="checkout">Checkout</button>
         </a>
-        <button onclick="clearCart()" class="removeAll">Clear Cards</button>`
+        <button onclick="clearCart()" class="removeAll">Clear Cart</button>`
     }
     else{
         return;
